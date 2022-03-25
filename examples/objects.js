@@ -58,3 +58,18 @@ var flash = Object.create(superHeroPrototype);
 flash.name = 'Flash';
 
 flash.sayHello();
+
+// Modules and Encapsulation
+function createHero(heroName) {
+    var name = heroName;
+
+    return {
+        fly : function(destination) {
+            console.log(name + ' flying to ' + destination);
+        }
+    }
+}
+
+var megaman = createHero('Megaman');
+megaman.fly('the Moon');
+//console.log(megaman.name); // undefined
